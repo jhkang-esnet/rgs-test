@@ -1,10 +1,10 @@
-cloudCredentialSecretName: "cc-xxxxx" # You can find or create this secret in Cluster Management -> Cloud Credentials
+cloudCredentialSecretName: "LBL" # You can find or create this secret in Cluster Management -> Cloud Credentials
 cloudprovider: "vsphere"
 
 # Rancher Manager URL
 rancher:
   cattle:
-    url: "rancher.example.com"
+    url: "rancher-staging-west.es.net"
 
 ### Configure information about the cluster you are creating here
 cluster:
@@ -14,7 +14,7 @@ cluster:
 
 ### Configure information about vCenter
 vcenter:
-  host: "vcenter.lab"
+  host: "vcenter-west1.es.net"
 
 # For a complete list of config options, please look here:
 # https://github.com/rancherfederal/rancher-cluster-templates/blob/customWork/charts/cluster-templates/templates/nodeconfig-vsphere.yaml
@@ -24,7 +24,7 @@ nodepools:
     datacenter: "/Datacenter"
     datastore: "/Datacenter/datastore/vsanDatastore"
   # Specify one creationType: vm, template, library, legacy
-    creationType: "library" 
+    creationType: "library"
   # cloneFrom will need to match the corresponding creationType
   # For example, if you were cloning from a template, you would use:
   # creationType: "template"
